@@ -1,0 +1,58 @@
+# Environment and secrets
+.env
+.env.*
+*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+.envrc
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Build and packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Django (if used)
+*.log
+db.sqlite3
+db.sqlite3-journal
+media/uploads/
+staticfiles/
+
+# Node (if used)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
