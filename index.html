@@ -60,23 +60,44 @@
           <a class="btn btn-secondary" href="#projects">Смотреть проекты</a>
         </div>
       </div>
-      <aside class="hero-card about-card" aria-label="Обо мне">
-        <h3>Обо мне</h3>
-        <p class="about-card__text">
-          Python-разработчик с опытом внедрения веб-систем с нуля. Работаю с полным циклом:
-          требования, архитектура, разработка, запуск. Базовый фронтенд: HTML, Bootstrap, JavaScript.
-        </p>
+      <aside class="hero-card" aria-label="Краткая информация">
+        <h3>Коротко</h3>
+        <ul class="meta-list">
+          <li><span>Специализация</span><strong>Backend (Django/DRF)</strong></li>
+          <li><span>Формат</span><strong>Удалённо / гибрид</strong></li>
+          <li><span>Статус</span><strong class="status">Открыт к проектам</strong></li>
+        </ul>
       </aside>
     </section>
 
-    <section id="about">
-      <h2 class="section-title">Обо мне</h2>
-      <p class="section-subtitle about-text">
-        Python-разработчик с опытом внедрения веб-систем с нуля. Работаю с полным циклом:
-        требования, архитектура, разработка, запуск. Пишу чистый SQL и понимаю ORM.
-        Базовый фронтенд: HTML, Bootstrap, JavaScript — в проектах использовал Django-шаблоны
-        и скрипты для интерфейса и работы с API.
-      </p>
+    <section id="about" class="about-section">
+      <div class="about-panel">
+        <div class="about-panel__content">
+          <h2 class="section-title">Обо мне</h2>
+          <p class="about-text">
+            Python-разработчик с опытом внедрения веб-систем с нуля. Работаю с полным циклом:
+            требования, архитектура, разработка и запуск. Пишу чистый SQL и понимаю ORM.
+          </p>
+          <p class="about-text">
+            Базовый фронтенд: HTML, Bootstrap, JavaScript — в проектах использовал Django-шаблоны
+            и скрипты для интерфейса и работы с API.
+          </p>
+        </div>
+        <ul class="about-highlights">
+          <li>
+            <span class="about-highlights__label">Цикл работы</span>
+            <span class="about-highlights__value">Требования → код → запуск</span>
+          </li>
+          <li>
+            <span class="about-highlights__label">Основной стек</span>
+            <span class="about-highlights__value">Django, DRF, PostgreSQL</span>
+          </li>
+          <li>
+            <span class="about-highlights__label">Интерфейс</span>
+            <span class="about-highlights__value">Шаблоны, Bootstrap, JS</span>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section id="services">
@@ -260,9 +281,9 @@
               Или <a href="https://t.me/fsyu13" target="_blank" rel="noopener noreferrer">Telegram</a>
               · <a href="https://forms.yandex.ru/u/6a0dd4486d2d736ca5db7ebb/" target="_blank" rel="noopener noreferrer">открыть форму на Яндексе</a>
             </p>
-            <button type="button" class="form-fallback-toggle" id="form-fallback-toggle" hidden>
+            <!-- <button type="button" class="form-fallback-toggle" id="form-fallback-toggle" hidden>
               Форма не загрузилась — отправить через почту
-            </button>
+            </button> -->
           </div>
 
           <!-- <form class="contact-form contact-form--fallback" id="feedback-form" action="#" method="post" hidden>
