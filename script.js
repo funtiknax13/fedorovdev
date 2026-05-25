@@ -15,8 +15,56 @@ if (menuToggle && nav) {
   });
 }
 
+const yandexBlock = document.getElementById("yandex-form-block");
+const yandexIframe = document.getElementById("yandex-form-iframe");
+const fallbackToggle = document.getElementById("form-fallback-toggle");
+const yandexToggle = document.getElementById("form-yandex-toggle");
 const form = document.getElementById("feedback-form");
 const status = document.getElementById("form-status");
+
+const showFallbackForm = () => {
+  if (!yandexBlock || !form) return;
+  yandexBlock.classList.add("is-hidden");
+  yandexBlock.hidden = true;
+  form.hidden = false;
+  if (yandexToggle) yandexToggle.hidden = false;
+};
+
+const showYandexForm = () => {
+  if (!yandexBlock || !form) return;
+  yandexBlock.classList.remove("is-hidden");
+  yandexBlock.hidden = false;
+  form.hidden = true;
+  if (yandexToggle) yandexToggle.hidden = true;
+  if (fallbackToggle) fallbackToggle.hidden = false;
+};
+
+if (fallbackToggle) {
+  fallbackToggle.addEventListener("click", showFallbackForm);
+}
+
+if (yandexToggle) {
+  yandexToggle.addEventListener("click", showYandexForm);
+}
+
+if (yandexIframe && fallbackToggle) {
+  fallbackToggle.hidden = false;
+
+  yandexIframe.addEventListener("error", () => {
+    fallbackToggle.hidden = false;
+  });
+
+  window.setTimeout(() => {
+    try {
+      const doc = yandexIframe.contentDocument;
+      if (doc && doc.body && doc.body.childElementCount === 0) {
+        fallbackToggle.hidden = false;
+      }
+    } catch {
+      /* cross-origin: iframe likely loaded, keep Yandex form visible */
+    }
+  }, 8000);
+}
 
 if (form && status) {
   form.addEventListener("submit", (event) => {

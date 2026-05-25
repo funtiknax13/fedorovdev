@@ -244,7 +244,28 @@
           </ul>
         </aside>
         <div class="contact-form-panel">
-          <form class="contact-form" id="feedback-form" action="#" method="post">
+          <div class="yandex-form-block" id="yandex-form-block">
+            <p class="yandex-form-heading">Заявка</p>
+            <div class="yandex-form-frame">
+              <iframe
+                id="yandex-form-iframe"
+                src="https://forms.yandex.ru/u/6a0dd4486d2d736ca5db7ebb?iframe=1"
+                name="ya-form-6a0dd4486d2d736ca5db7ebb"
+                title="Форма заявки FedorovDev"
+                class="yandex-form-iframe"
+                loading="lazy"
+              ></iframe>
+            </div>
+            <p class="form-alt">
+              Или <a href="https://t.me/fsyu13" target="_blank" rel="noopener noreferrer">Telegram</a>
+              · <a href="https://forms.yandex.ru/u/6a0dd4486d2d736ca5db7ebb/" target="_blank" rel="noopener noreferrer">открыть форму на Яндексе</a>
+            </p>
+            <button type="button" class="form-fallback-toggle" id="form-fallback-toggle" hidden>
+              Форма не загрузилась — отправить через почту
+            </button>
+          </div>
+
+          <form class="contact-form contact-form--fallback" id="feedback-form" action="#" method="post" hidden>
             <label for="name">Имя</label>
             <input id="name" name="name" type="text" placeholder="Как к вам обращаться" required autocomplete="name">
             <label for="contact">Контакт</label>
@@ -253,10 +274,9 @@
             <textarea id="message" name="message" rows="5" placeholder="Тип проекта: сайт, API, доработка Django…" required></textarea>
             <button class="btn btn-primary" type="submit">Отправить заявку</button>
             <p class="form-status" id="form-status" aria-live="polite"></p>
-            <p class="form-alt">
-              Или напишите в <a href="https://t.me/fsyu13" target="_blank" rel="noopener noreferrer">Telegram</a>
-              · <a href="https://forms.yandex.ru/u/6a0dd4486d2d736ca5db7ebb/" target="_blank" rel="noopener noreferrer">форма на Яндексе</a>
-            </p>
+            <button type="button" class="form-fallback-toggle" id="form-yandex-toggle" hidden>
+              Вернуться к форме Яндекса
+            </button>
           </form>
         </div>
       </div>
@@ -310,6 +330,7 @@
       ]
     }
   </script>
+  <script src="https://forms.yandex.ru/_static/embed.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
