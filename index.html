@@ -3,149 +3,205 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Федоров Сергей — Python Backend-разработчик (Django/DRF) | FedorovDev</title>
-  <meta name="description" content="Федоров Сергей (FedorovDev): разработка сайтов и веб-приложений на Django, DRF, PostgreSQL. Портфолио проектов и заказ разработки под ключ.">
-  <meta name="keywords" content="Python разработчик, Django разработчик, DRF, PostgreSQL, backend разработчик, Федоров Сергей, FedorovDev, веб-приложения на Django">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Федоров Сергей">
-  <link rel="canonical" href="https://fedorovdev.ru/">
+  <title>Фёдоров Сергей — Python backend и full-stack разработка веб-приложений и SaaS | FedorovDev</title>
+  <meta name="description" content="Фёдоров Сергей (FedorovDev) — Python-разработчик. Backend и веб-приложения на Django, FastAPI и DRF, фронтенд на Vue, PostgreSQL, Docker и AI-интеграции. Разработка веб-сервисов и SaaS под ключ — от идеи до продакшена.">
+  <meta name="keywords" content="Python разработчик, FastAPI разработчик, Django разработчик, full-stack разработчик, backend разработчик, разработка SaaS, веб-приложения на заказ, Vue разработчик, PostgreSQL, Docker, AI интеграции, Фёдоров Сергей, FedorovDev">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Фёдоров Сергей">
+  <meta name="theme-color" content="#0c0b0d">
+  <link rel="canonical" href="https://fedorov-dev.ru/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon.svg" sizes="any">
   <link rel="apple-touch-icon" href="favicon.svg">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
-  <meta property="og:title" content="Федоров Сергей — Python Backend (Django/DRF/PostgreSQL)">
-  <meta property="og:description" content="Разработка веб-систем и сайтов на Django: от лендинга до сервисов с авторизацией и личными кабинетами.">
-  <meta property="og:url" content="https://fedorovdev.ru/">
+  <meta property="og:title" content="Фёдоров Сергей — Python backend & full-stack (Django · FastAPI · Vue)">
+  <meta property="og:description" content="Разработка веб-сервисов и SaaS под ключ: backend на Django/FastAPI, фронтенд на Vue, PostgreSQL, Docker, AI-интеграции. Флагман — airunningcoach.pro.">
+  <meta property="og:url" content="https://fedorov-dev.ru/">
   <meta property="og:site_name" content="FedorovDev">
-  <meta property="og:image" content="https://fedorovdev.ru/images/mathtask.png">
+  <meta property="og:image" content="https://fedorov-dev.ru/images/airunningcoach.png">
+  <meta property="og:image:alt" content="AI Running Coach — SaaS-сервис на FastAPI и Vue от FedorovDev">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Федоров Сергей | FedorovDev — Django Backend">
-  <meta name="twitter:description" content="Django, DRF, PostgreSQL. Сайты и веб-сервисы любого уровня сложности.">
+  <meta name="twitter:title" content="Фёдоров Сергей | FedorovDev — Python backend & full-stack">
+  <meta name="twitter:description" content="Django, FastAPI, Vue, PostgreSQL, Docker, AI. Веб-сервисы и SaaS любого уровня сложности.">
+  <meta name="twitter:image" content="https://fedorov-dev.ru/images/airunningcoach.png">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#projects">К проектам</a>
+  <div class="grain" aria-hidden="true"></div>
+
   <header class="header">
     <div class="container header-inner">
-      <a class="logo" href="#top">FedorovDev</a>
+      <a class="logo" href="#top">FEDOROV.DEV</a>
       <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Меню</button>
-      <nav class="nav" id="main-nav">
+      <nav class="nav" id="main-nav" aria-label="Основная навигация">
         <a href="#about">Обо мне</a>
         <a href="#services">Услуги</a>
         <a href="#projects">Проекты</a>
         <a href="#stack">Стек</a>
         <a href="#process">Процесс</a>
         <a href="#faq">Вопросы</a>
-        <a href="#contacts">Заявка</a>
+        <a class="nav-cta" href="#contacts">Обсудить проект →</a>
       </nav>
     </div>
   </header>
 
-  <main id="top" class="container">
-    <section class="hero">
+  <main id="top">
+    <section class="hero container" aria-label="Вступление">
       <div>
-        <p class="eyebrow">FedorovDev · Python Backend</p>
-        <h1>Веб-системы и сайты на Django — от идеи до продакшна</h1>
-        <p>
-          Я <strong>Федоров Сергей</strong>, Python Backend-разработчик (Django / DRF / PostgreSQL).
-          Делаю сайты и веб-сервисы под задачу — от простого лендинга до приложения с авторизацией и ролями.
+        <p class="eyebrow load-up d1">Python · Backend · Full-stack</p>
+        <h1 class="load-up d2">Веб-сервисы и <span class="hl">SaaS</span>, которые работают в продакшене</h1>
+        <p class="hero-lead load-up d3">
+          Я <strong>Фёдоров Сергей</strong> — Python-разработчик. Проектирую и собираю backend, API
+          и веб-приложения под задачу: от <strong>Django</strong> и <strong>FastAPI</strong> до фронтенда
+          на <strong>Vue</strong>, баз данных и Docker. Довожу продукт от идеи до запуска и поддерживаю после релиза.
         </p>
-        <ul class="hero-points">
-          <li>Понятный процесс и регулярная связь по проекту</li>
-          <li>Backend, API и интерфейс на Django-шаблонах</li>
-          <li>Готов к удалённой и гибридной работе</li>
-        </ul>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contacts">Обсудить задачу</a>
+        <div class="hero-actions load-up d4">
+          <a class="btn btn-primary" href="#contacts">Обсудить проект</a>
           <a class="btn btn-secondary" href="#projects">Смотреть проекты</a>
         </div>
       </div>
-      <aside class="hero-card" aria-label="Краткая информация">
-        <h3>Коротко</h3>
-        <ul class="meta-list">
-          <li><span>Специализация</span><strong>Backend (Django/DRF)</strong></li>
-          <li><span>Формат</span><strong>Удалённо / гибрид</strong></li>
-          <li><span>Статус</span><strong class="status">Открыт к проектам</strong></li>
-        </ul>
+      <aside class="spec load-up d5" aria-label="Краткая информация">
+        <dl>
+          <div class="row"><dt>Статус</dt><dd><span class="on">●</span> открыт к проектам</dd></div>
+          <div class="row"><dt>Фокус</dt><dd>Backend · API · SaaS</dd></div>
+          <div class="row"><dt>Стек</dt><dd>Python · Django · FastAPI · Vue · Docker</dd></div>
+          <div class="row"><dt>Формат</dt><dd>удалённо / гибрид</dd></div>
+          <div class="row"><dt>Флагман</dt><dd><a href="https://airunningcoach.pro/" target="_blank" rel="noopener noreferrer">airunningcoach.pro ↗</a></dd></div>
+        </dl>
       </aside>
     </section>
 
-    <section id="about" class="about-section">
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Python</span><span>Django</span><span>FastAPI</span><span>DRF</span><span>Vue 3</span><span>TypeScript</span><span>PostgreSQL</span><span>Docker</span><span>Redis</span><span>Celery</span><span>OpenAI API</span><span>CI/CD</span><span>Nginx</span>
+        <span>Python</span><span>Django</span><span>FastAPI</span><span>DRF</span><span>Vue 3</span><span>TypeScript</span><span>PostgreSQL</span><span>Docker</span><span>Redis</span><span>Celery</span><span>OpenAI API</span><span>CI/CD</span><span>Nginx</span>
+      </div>
+    </div>
+
+    <section id="about" class="container" aria-labelledby="about-title">
+      <header class="section-head" data-reveal>
+        <span class="section-index">01</span>
+        <h2 class="section-title" id="about-title">Обо мне</h2>
+      </header>
       <div class="about-panel">
-        <div class="about-panel__content">
-          <h2 class="section-title">Обо мне</h2>
+        <div data-reveal>
           <p class="about-text">
-            Python-разработчик с опытом внедрения веб-систем с нуля. Работаю с полным циклом:
-            требования, архитектура, разработка и запуск. Пишу чистый SQL и понимаю ORM.
+            Python-разработчик полного цикла: <strong>требования → архитектура → код → запуск → поддержка</strong>.
+            Начинал с Django и DRF, сейчас одинаково уверенно собираю сервисы на <strong>FastAPI</strong>
+            и фронтенд на <strong>Vue 3</strong>. Пишу чистый SQL, проектирую модели данных, разворачиваю
+            в Docker и сопровождаю продукт после релиза.
           </p>
           <p class="about-text">
-            Базовый фронтенд: HTML, Bootstrap, JavaScript — в проектах использовал Django-шаблоны
-            и скрипты для интерфейса и работы с API.
+            Мой флагманский проект — <a href="https://airunningcoach.pro/" target="_blank" rel="noopener noreferrer">airunningcoach.pro</a>:
+            SaaS для бегунов на FastAPI + Vue с разбором FIT-файлов тренировок, аналитикой дистанции и темпа,
+            целями и <strong>AI-тренером на базе OpenAI</strong>. От схемы базы данных до продакшен-деплоя в Docker — сделано в одиночку.
           </p>
         </div>
-        <ul class="about-highlights">
+        <ul class="about-highlights" data-reveal>
           <li>
             <span class="about-highlights__label">Цикл работы</span>
-            <span class="about-highlights__value">Требования → код → запуск</span>
+            <span class="about-highlights__value">Требования → код → запуск → поддержка</span>
           </li>
           <li>
-            <span class="about-highlights__label">Основной стек</span>
-            <span class="about-highlights__value">Django, DRF, PostgreSQL</span>
+            <span class="about-highlights__label">Backend</span>
+            <span class="about-highlights__value">Python · Django · FastAPI · DRF</span>
           </li>
           <li>
-            <span class="about-highlights__label">Интерфейс</span>
-            <span class="about-highlights__value">Шаблоны, Bootstrap, JS</span>
+            <span class="about-highlights__label">Frontend</span>
+            <span class="about-highlights__value">Vue 3 · TypeScript · JavaScript</span>
+          </li>
+          <li>
+            <span class="about-highlights__label">Данные и инфра</span>
+            <span class="about-highlights__value">PostgreSQL · Docker · CI/CD</span>
           </li>
         </ul>
       </div>
     </section>
 
-    <section id="services">
-      <h2 class="section-title">Что могу сделать для вас</h2>
-      <p class="section-subtitle">
-        Сайты и сервисы разного уровня: от простого лендинга до системы с авторизацией, ролями и отчётами.
+    <section id="services" class="container" aria-labelledby="services-title">
+      <header class="section-head" data-reveal>
+        <span class="section-index">02</span>
+        <h2 class="section-title" id="services-title">Что я делаю</h2>
+      </header>
+      <p class="section-subtitle" data-reveal>
+        Веб-сервисы разного уровня: от backend и API до готового SaaS с современным интерфейсом, биллингом и AI.
       </p>
       <div class="grid services-grid">
-        <article class="card">
+        <article class="card" data-reveal>
+          <span class="card__num">/01</span>
           <h3>Backend и API</h3>
-          <p>Django / DRF, PostgreSQL, Celery, Redis: REST API, роли, бизнес-логика, интеграции и фоновые задачи.</p>
+          <p>Django, FastAPI, DRF. REST API, авторизация и роли, бизнес-логика, фоновые задачи (Celery, APScheduler), интеграции внешних сервисов и платежей.</p>
         </article>
-        <article class="card">
-          <h3>Веб-приложение под ключ</h3>
-          <p>От прототипа до запуска: шаблоны Django, Bootstrap, админка, деплой и сопровождение после релиза.</p>
+        <article class="card" data-reveal>
+          <span class="card__num">/02</span>
+          <h3>Веб-приложения и SaaS под ключ</h3>
+          <p>От прототипа до запуска: backend + фронтенд на Vue или Django-шаблонах, личные кабинеты, подписки, админка и деплой в Docker.</p>
         </article>
-        <article class="card">
-          <h3>Доработка проектов</h3>
-          <p>Расширение функционала, рефакторинг и поддержка существующих решений на Django.</p>
+        <article class="card" data-reveal>
+          <span class="card__num">/03</span>
+          <h3>AI-интеграции и автоматизация</h3>
+          <p>Подключение OpenAI и LLM в продукт: ассистенты, аналитика, генерация и обработка данных. Автоматизация рутинных процессов.</p>
+        </article>
+        <article class="card" data-reveal>
+          <span class="card__num">/04</span>
+          <h3>Доработка и поддержка</h3>
+          <p>Развитие функционала, рефакторинг и сопровождение существующих проектов на Django и FastAPI.</p>
         </article>
       </div>
     </section>
 
-    <section id="projects">
-      <h2 class="section-title">Проекты</h2>
-      <p class="section-subtitle">Примеры реализованных веб-приложений на Django.</p>
+    <section id="projects" class="container" aria-labelledby="projects-title">
+      <header class="section-head" data-reveal>
+        <span class="section-index">03</span>
+        <h2 class="section-title" id="projects-title">Проекты</h2>
+      </header>
+      <p class="section-subtitle" data-reveal>Примеры реализованных веб-приложений — от продакшен-SaaS до пет-проектов.</p>
 
-      <div class="carousel" data-carousel>
+      <div class="carousel" data-carousel data-reveal>
         <button type="button" class="carousel__btn carousel__btn--prev" aria-label="Предыдущий проект" data-carousel-prev>‹</button>
 
         <div class="carousel__viewport">
           <div class="carousel__track" data-carousel-track>
             <article class="carousel__slide project-card">
+              <a class="project-card__media" href="https://airunningcoach.pro/" target="_blank" rel="noopener noreferrer">
+                <img src="images/airunningcoach.png" alt="AI Running Coach — SaaS-сервис для бегунов на FastAPI и Vue с AI-тренером" width="800" height="450" loading="lazy">
+              </a>
+              <div class="project-card__body">
+                <p class="project-card__tag">Продакшн · SaaS · FastAPI / Vue</p>
+                <h3>AI Running Coach</h3>
+                <p>SaaS для бегунов: загрузка тренировок из FIT-файлов, аналитика дистанции, темпа и объёма, цели и персональные рекомендации от AI-тренера на базе OpenAI.</p>
+                <ul class="project-meta">
+                  <li>FastAPI</li>
+                  <li>Vue 3</li>
+                  <li>PostgreSQL</li>
+                  <li>Docker</li>
+                  <li>OpenAI</li>
+                </ul>
+                <a class="project-link" href="https://airunningcoach.pro/" target="_blank" rel="noopener noreferrer">Открыть сайт →</a>
+              </div>
+            </article>
+
+            <article class="carousel__slide project-card">
               <a class="project-card__media" href="https://mathtask.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">
-                <img src="images/mathtask.png" alt="MathTasks — математические задачи на Django" width="800" height="450" loading="lazy">
+                <img src="images/mathtask.png" alt="MathTasks — веб-сервис с математическими задачами на Django" width="800" height="450" loading="lazy">
               </a>
               <div class="project-card__body">
                 <p class="project-card__tag">Пет-проект · Django</p>
                 <h3>MathTasks</h3>
-                <p>Веб-сервис с математическими задачами: каталог заданий, рейтинг пользователей, регистрация.</p>
+                <p>Веб-сервис с математическими задачами: каталог заданий, рейтинг пользователей, регистрация и авторизация.</p>
                 <ul class="project-meta">
                   <li>Django</li>
                   <li>PostgreSQL</li>
                 </ul>
-                <a class="btn btn-secondary project-link" href="https://mathtask.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">Открыть сайт →</a>
+                <a class="project-link" href="https://mathtask.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">Открыть сайт →</a>
               </div>
             </article>
 
@@ -161,16 +217,16 @@
                   <li>Django</li>
                   <li>Bootstrap</li>
                 </ul>
-                <a class="btn btn-secondary project-link" href="https://mypineapple.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">Открыть сайт →</a>
+                <a class="project-link" href="https://mypineapple.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">Открыть сайт →</a>
               </div>
             </article>
 
-            <article class="carousel__slide project-card project-card--nda">
-              <div class="project-card__media project-card__media--static">
-                <img src="images/journal.png" alt="Электронный журнал — веб-система на Django" width="800" height="450" loading="lazy">
+            <article class="carousel__slide project-card">
+              <div class="project-card__media">
+                <img src="images/journal.png" alt="Электронный журнал — внутренняя веб-система на Django" width="800" height="450" loading="lazy">
               </div>
               <div class="project-card__body">
-                <p class="project-card__tag">Продакшн · NDA</p>
+                <p class="project-card__tag">Продакшн · NDA · Django</p>
                 <h3>Электронный журнал</h3>
                 <p>Внутренняя веб-система: авторизация, роли пользователей, отчёты и администрирование.</p>
                 <ul class="project-meta">
@@ -184,92 +240,122 @@
         </div>
 
         <button type="button" class="carousel__btn carousel__btn--next" aria-label="Следующий проект" data-carousel-next>›</button>
-
         <div class="carousel__dots" data-carousel-dots role="tablist" aria-label="Выбор проекта"></div>
       </div>
     </section>
 
-    <section id="stack">
-      <h2 class="section-title">Технологический стек</h2>
-      <p class="section-subtitle">Инструменты, которые использую в проектах.</p>
-      <div class="chips">
-        <span class="chip">Python</span>
-        <span class="chip">Django</span>
-        <span class="chip">DRF</span>
-        <span class="chip">PostgreSQL</span>
-        <span class="chip">SQL</span>
-        <span class="chip">Celery</span>
-        <span class="chip">Redis</span>
-        <span class="chip">Flask / FastAPI</span>
-        <span class="chip">Docker</span>
-        <span class="chip">CI/CD</span>
-        <span class="chip">Pytest</span>
-        <span class="chip">REST API</span>
-        <span class="chip">Linux</span>
-        <span class="chip">Git</span>
-        <span class="chip">HTML / Bootstrap</span>
-        <span class="chip">JavaScript</span>
+    <section id="stack" class="container" aria-labelledby="stack-title">
+      <header class="section-head" data-reveal>
+        <span class="section-index">04</span>
+        <h2 class="section-title" id="stack-title">Технологический стек</h2>
+      </header>
+      <p class="section-subtitle" data-reveal>Инструменты, которые использую в продакшене.</p>
+      <div class="stack-groups">
+        <div class="stack-group" data-reveal>
+          <h3>Backend</h3>
+          <div class="chips">
+            <span class="chip">Python</span><span class="chip">Django</span><span class="chip">DRF</span>
+            <span class="chip">FastAPI</span><span class="chip">Flask</span><span class="chip">Celery</span>
+            <span class="chip">APScheduler</span><span class="chip">REST API</span><span class="chip">Pydantic</span>
+          </div>
+        </div>
+        <div class="stack-group" data-reveal>
+          <h3>Frontend</h3>
+          <div class="chips">
+            <span class="chip">Vue 3</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span>
+            <span class="chip">Vite</span><span class="chip">Pinia</span><span class="chip">HTML / CSS</span>
+            <span class="chip">Bootstrap</span>
+          </div>
+        </div>
+        <div class="stack-group" data-reveal>
+          <h3>Данные и инфраструктура</h3>
+          <div class="chips">
+            <span class="chip">PostgreSQL</span><span class="chip">SQLAlchemy</span><span class="chip">SQL</span>
+            <span class="chip">Alembic</span><span class="chip">Redis</span><span class="chip">Docker</span>
+            <span class="chip">Nginx</span><span class="chip">CI/CD</span><span class="chip">Linux</span><span class="chip">Git</span>
+          </div>
+        </div>
+        <div class="stack-group" data-reveal>
+          <h3>AI и тестирование</h3>
+          <div class="chips">
+            <span class="chip">OpenAI API</span><span class="chip">LLM-интеграции</span>
+            <span class="chip">Pytest</span><span class="chip">httpx</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="process">
-      <h2 class="section-title">Как строится работа</h2>
+    <section id="process" class="container" aria-labelledby="process-title">
+      <header class="section-head" data-reveal>
+        <span class="section-index">05</span>
+        <h2 class="section-title" id="process-title">Как строится работа</h2>
+      </header>
       <div class="grid process-grid">
-        <article class="card"><h3>01. Бриф</h3><p>Цели, роли пользователей, интеграции. Оценка сроков и этапов.</p></article>
-        <article class="card"><h3>02. Архитектура</h3><p>Модели данных, API, прототип экранов при необходимости.</p></article>
-        <article class="card"><h3>03. Разработка</h3><p>Итерации с демо: backend, шаблоны, тесты критичных сценариев.</p></article>
-        <article class="card"><h3>04. Запуск</h3><p>Деплой, документация, передача доступов и поддержка после релиза.</p></article>
+        <article class="card" data-reveal><span class="card__num">01</span><h3>Бриф</h3><p>Цели, роли пользователей, интеграции. Оценка сроков и этапов.</p></article>
+        <article class="card" data-reveal><span class="card__num">02</span><h3>Архитектура</h3><p>Модели данных, API, прототип экранов при необходимости.</p></article>
+        <article class="card" data-reveal><span class="card__num">03</span><h3>Разработка</h3><p>Итерации с демо: backend, фронтенд, тесты критичных сценариев.</p></article>
+        <article class="card" data-reveal><span class="card__num">04</span><h3>Запуск</h3><p>Деплой в Docker, документация, передача доступов и поддержка.</p></article>
       </div>
     </section>
 
-    <section id="faq">
-      <h2 class="section-title">Частые вопросы</h2>
-      <div class="faq-list">
+    <section id="faq" class="container" aria-labelledby="faq-title">
+      <header class="section-head" data-reveal>
+        <span class="section-index">06</span>
+        <h2 class="section-title" id="faq-title">Частые вопросы</h2>
+      </header>
+      <div class="faq-list" data-reveal>
         <details>
-          <summary>Какие сайты вы делаете?</summary>
-          <p>Лендинги, корпоративные сайты, личные кабинеты, внутренние сервисы с ролями и отчётами — под задачу и бюджет.</p>
+          <summary>На каких технологиях вы работаете?</summary>
+          <p>Backend на Python: Django, DRF и FastAPI. Фронтенд на Vue 3 или Django-шаблонах. Базы данных — PostgreSQL, инфраструктура — Docker, Nginx и CI/CD. Подключаю AI через OpenAI API.</p>
         </details>
         <details>
-          <summary>Только backend или «под ключ»?</summary>
-          <p>Могу закрыть backend и API, а также собрать интерфейс на Django-шаблонах с Bootstrap и базовым JavaScript.</p>
+          <summary>Делаете только backend или фронтенд тоже?</summary>
+          <p>И то, и другое. Могу закрыть весь цикл: API и бизнес-логику на backend плюс интерфейс на Vue 3 или Django-шаблонах с базовым JavaScript.</p>
         </details>
         <details>
-          <summary>Какой у вас основной стек?</summary>
-          <p>Django, DRF, PostgreSQL, Celery, Redis. Готов к Flask, FastAPI, Docker и CI/CD по требованиям проекта.</p>
+          <summary>Можете подключить AI к продукту?</summary>
+          <p>Да. Интегрирую OpenAI и другие LLM — ассистенты, аналитика, обработка данных. Рабочий пример — AI-тренер в сервисе airunningcoach.pro.</p>
+        </details>
+        <details>
+          <summary>Беретесь за доработку готового проекта?</summary>
+          <p>Да. Развиваю, рефакторю и сопровождаю существующие проекты на Django и FastAPI.</p>
         </details>
         <details>
           <summary>Как оценивается стоимость?</summary>
-          <p>После брифа — фикс по этапам. Обсуждаем прозрачно, без скрытых доплат.</p>
+          <p>После брифа — фиксированная стоимость по этапам. Обсуждаем прозрачно, без скрытых доплат.</p>
         </details>
       </div>
     </section>
 
-    <section class="contacts" id="contacts">
-      <h2 class="section-title">Расскажите о задаче</h2>
-      <p class="section-subtitle">Форма или Telegram. Отвечу в течение рабочего дня.</p>
-      <div class="contact-grid">
-        <aside class="contact-card">
-          <h3 class="contact-card__title">Контакты</h3>
-          <ul class="contact-list">
-            <li class="contact-list__name">Федоров Сергей</li>
-            <li class="contact-list__role">Python Backend · Django / DRF / PostgreSQL</li>
-            <li>
-              <span class="contact-list__label">Email</span>
-              <a href="mailto:funtiknax13@yandex.ru">funtiknax13@yandex.ru</a>
-            </li>
-            <li>
-              <span class="contact-list__label">Telegram</span>
-              <a href="https://t.me/fsyu13" target="_blank" rel="noopener noreferrer">@fsyu13</a>
-            </li>
-            <li>
-              <span class="contact-list__label">GitHub</span>
-              <a href="https://github.com/funtiknax13" target="_blank" rel="noopener noreferrer">github.com/funtiknax13</a>
-            </li>
-          </ul>
-        </aside>
-        <div class="contact-form-panel">
-          <div class="yandex-form-block" id="yandex-form-block">
-            <p class="yandex-form-heading">Заявка</p>
+    <section class="container" aria-labelledby="contacts-title">
+      <div class="contacts" id="contacts">
+        <header class="section-head" data-reveal>
+          <span class="section-index">07</span>
+          <h2 class="section-title" id="contacts-title">Расскажите о задаче</h2>
+        </header>
+        <p class="section-subtitle" data-reveal>Форма или Telegram. Отвечу в течение рабочего дня.</p>
+        <div class="contact-grid">
+          <aside class="contact-card" data-reveal>
+            <h3 class="contact-card__title">// Контакты</h3>
+            <ul class="contact-list">
+              <li class="contact-list__name">Фёдоров Сергей</li>
+              <li class="contact-list__role">Python Backend &amp; Full-stack · Django / FastAPI / Vue</li>
+              <li>
+                <span class="contact-list__label">Email</span>
+                <a href="mailto:funtiknax13@yandex.ru">funtiknax13@yandex.ru</a>
+              </li>
+              <li>
+                <span class="contact-list__label">Telegram</span>
+                <a href="https://t.me/fsyu13" target="_blank" rel="noopener noreferrer">@fsyu13</a>
+              </li>
+              <li>
+                <span class="contact-list__label">GitHub</span>
+                <a href="https://github.com/funtiknax13" target="_blank" rel="noopener noreferrer">github.com/funtiknax13</a>
+              </li>
+            </ul>
+          </aside>
+          <div class="contact-form-panel" data-reveal>
+            <p class="yandex-form-heading">// Заявка</p>
             <div class="yandex-form-frame">
               <iframe
                 id="yandex-form-iframe"
@@ -284,75 +370,141 @@
               Или <a href="https://t.me/fsyu13" target="_blank" rel="noopener noreferrer">Telegram</a>
               · <a href="https://forms.yandex.ru/u/6a0dd4486d2d736ca5db7ebb/" target="_blank" rel="noopener noreferrer">открыть форму на Яндексе</a>
             </p>
-            <!-- <button type="button" class="form-fallback-toggle" id="form-fallback-toggle" hidden>
-              Форма не загрузилась — отправить через почту
-            </button> -->
           </div>
-
-          <!-- <form class="contact-form contact-form--fallback" id="feedback-form" action="#" method="post" hidden>
-            <label for="name">Имя</label>
-            <input id="name" name="name" type="text" placeholder="Как к вам обращаться" required autocomplete="name">
-            <label for="contact">Контакт</label>
-            <input id="contact" name="contact" type="text" placeholder="Email, телефон или Telegram" required>
-            <label for="message">Задача</label>
-            <textarea id="message" name="message" rows="5" placeholder="Тип проекта: сайт, API, доработка Django…" required></textarea>
-            <button class="btn btn-primary" type="submit">Отправить заявку</button>
-            <p class="form-status" id="form-status" aria-live="polite"></p>
-            <button type="button" class="form-fallback-toggle" id="form-yandex-toggle" hidden>
-              Вернуться к форме Яндекса
-            </button>
-          </form> -->
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">© 2026 FedorovDev — Федоров Сергей. Python Backend, Django, разработка сайтов и веб-систем.</div>
+  <footer class="footer container">
+    <div>© 2026 FedorovDev — Фёдоров Сергей. Python backend &amp; full-stack: Django, FastAPI, Vue, разработка веб-сервисов и SaaS.</div>
+    <div class="mono">
+      <a href="https://t.me/fsyu13" target="_blank" rel="noopener noreferrer">Telegram</a> ·
+      <a href="https://github.com/funtiknax13" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
   </footer>
 
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Person",
-          "@id": "https://fedorovdev.ru/#person",
-          "name": "Федоров Сергей",
-          "alternateName": "FedorovDev",
-          "jobTitle": "Python Backend-разработчик",
-          "description": "Разработка веб-систем на Django, DRF и PostgreSQL.",
-          "url": "https://fedorovdev.ru/",
-          "email": "funtiknax13@yandex.ru",
-          "knowsAbout": [
-            "Python", "Django", "Django REST Framework", "PostgreSQL",
-            "Celery", "Redis", "Docker", "REST API", "Web Development"
-          ],
-          "sameAs": [
-            "https://github.com/funtiknax13",
-            "https://t.me/fsyu13"
-          ]
-        },
-        {
-          "@type": "ProfessionalService",
-          "@id": "https://fedorovdev.ru/#service",
-          "name": "FedorovDev",
-          "description": "Разработка сайтов и веб-приложений на Django.",
-          "provider": { "@id": "https://fedorovdev.ru/#person" },
-          "areaServed": "RU",
-          "serviceType": ["Веб-разработка", "Backend-разработка", "Django-разработка"]
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://fedorovdev.ru/#website",
-          "url": "https://fedorovdev.ru/",
-          "name": "FedorovDev — Федоров Сергей",
-          "description": "Портфолио Python Backend-разработчика",
-          "inLanguage": "ru-RU",
-          "author": { "@id": "https://fedorovdev.ru/#person" }
-        }
-      ]
-    }
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://fedorov-dev.ru/#person",
+        "name": "Фёдоров Сергей",
+        "alternateName": "FedorovDev",
+        "jobTitle": "Python Backend & Full-stack разработчик",
+        "description": "Разработка веб-сервисов и SaaS на Python: Django, FastAPI, DRF, Vue, PostgreSQL, Docker и AI-интеграции.",
+        "url": "https://fedorov-dev.ru/",
+        "email": "funtiknax13@yandex.ru",
+        "knowsAbout": [
+          "Python", "Django", "Django REST Framework", "FastAPI", "Flask",
+          "Vue.js", "TypeScript", "JavaScript", "PostgreSQL", "SQLAlchemy",
+          "Redis", "Celery", "Docker", "Nginx", "REST API", "OpenAI API",
+          "SaaS", "Web Development", "CI/CD"
+        ],
+        "sameAs": [
+          "https://github.com/funtiknax13",
+          "https://t.me/fsyu13"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://fedorov-dev.ru/#service",
+        "name": "FedorovDev — разработка веб-сервисов и SaaS",
+        "description": "Backend, API и веб-приложения на Python (Django, FastAPI), фронтенд на Vue, базы данных PostgreSQL, Docker и AI-интеграции под ключ.",
+        "provider": { "@id": "https://fedorov-dev.ru/#person" },
+        "areaServed": "RU",
+        "serviceType": [
+          "Веб-разработка", "Backend-разработка", "Full-stack разработка",
+          "Django-разработка", "FastAPI-разработка", "Разработка SaaS", "AI-интеграции"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://fedorov-dev.ru/#website",
+        "url": "https://fedorov-dev.ru/",
+        "name": "FedorovDev — Фёдоров Сергей",
+        "description": "Портфолио Python backend и full-stack разработчика: Django, FastAPI, Vue, SaaS.",
+        "inLanguage": "ru-RU",
+        "author": { "@id": "https://fedorov-dev.ru/#person" }
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://fedorov-dev.ru/#projects",
+        "name": "Проекты FedorovDev",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "AI Running Coach",
+              "url": "https://airunningcoach.pro/",
+              "applicationCategory": "HealthApplication",
+              "operatingSystem": "Web",
+              "description": "SaaS для бегунов: разбор FIT-файлов тренировок, аналитика и AI-тренер на FastAPI + Vue + OpenAI."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "WebApplication",
+              "name": "MathTasks",
+              "url": "https://mathtask.pythonanywhere.com/",
+              "applicationCategory": "EducationApplication",
+              "operatingSystem": "Web",
+              "description": "Веб-сервис с математическими задачами на Django: каталог заданий и рейтинг пользователей."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "WebApplication",
+              "name": "«Ананас» — социальная сеть",
+              "url": "https://mypineapple.pythonanywhere.com/",
+              "applicationCategory": "SocialNetworkingApplication",
+              "operatingSystem": "Web",
+              "description": "Социальный веб-проект на Django: профили, лента, авторизация."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://fedorov-dev.ru/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "На каких технологиях вы работаете?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Backend на Python: Django, DRF и FastAPI. Фронтенд на Vue 3 или Django-шаблонах. Базы данных — PostgreSQL, инфраструктура — Docker, Nginx и CI/CD. Подключаю AI через OpenAI API." }
+          },
+          {
+            "@type": "Question",
+            "name": "Делаете только backend или фронтенд тоже?",
+            "acceptedAnswer": { "@type": "Answer", "text": "И то, и другое. Могу закрыть весь цикл: API и бизнес-логику на backend плюс интерфейс на Vue 3 или Django-шаблонах с JavaScript." }
+          },
+          {
+            "@type": "Question",
+            "name": "Можете подключить AI к продукту?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Да. Интегрирую OpenAI и другие LLM — ассистенты, аналитика, обработка данных. Рабочий пример — AI-тренер в сервисе airunningcoach.pro." }
+          },
+          {
+            "@type": "Question",
+            "name": "Беретесь за доработку готового проекта?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Да. Развиваю, рефакторю и сопровождаю существующие проекты на Django и FastAPI." }
+          },
+          {
+            "@type": "Question",
+            "name": "Как оценивается стоимость?",
+            "acceptedAnswer": { "@type": "Answer", "text": "После брифа — фиксированная стоимость по этапам. Обсуждаем прозрачно, без скрытых доплат." }
+          }
+        ]
+      }
+    ]
+  }
   </script>
   <script src="https://forms.yandex.ru/_static/embed.js"></script>
   <script src="script.js"></script>

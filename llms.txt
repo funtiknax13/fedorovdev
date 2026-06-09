@@ -1,0 +1,29 @@
+# FedorovDev — Фёдоров Сергей
+
+> Python backend и full-stack разработчик. Разработка веб-сервисов, API и SaaS под ключ: Django, FastAPI, DRF на backend; Vue 3 и TypeScript на frontend; PostgreSQL, Docker, CI/CD и AI-интеграции (OpenAI). Работает удалённо и в гибридном формате, открыт к новым проектам.
+
+## Об авторе
+- Имя: Фёдоров Сергей (бренд — FedorovDev)
+- Роль: Python Backend & Full-stack разработчик
+- Сайт: https://fedorov-dev.ru/
+- Email: funtiknax13@yandex.ru
+- Telegram: https://t.me/fsyu13
+- GitHub: https://github.com/funtiknax13
+
+## Услуги
+- Backend и API: Django, FastAPI, DRF — REST API, авторизация и роли, бизнес-логика, фоновые задачи (Celery, APScheduler), интеграции.
+- Веб-приложения и SaaS под ключ: backend + фронтенд на Vue или Django-шаблонах, личные кабинеты, подписки, админка, деплой в Docker.
+- AI-интеграции и автоматизация: OpenAI и LLM — ассистенты, аналитика, обработка данных.
+- Доработка и поддержка существующих проектов на Django и FastAPI.
+
+## Проекты
+- AI Running Coach (https://airunningcoach.pro/): продакшен-SaaS для бегунов — разбор FIT-файлов тренировок, аналитика дистанции и темпа, AI-тренер на OpenAI. Стек: FastAPI, Vue 3, PostgreSQL, Docker, OpenAI.
+- MathTasks (https://mathtask.pythonanywhere.com/): веб-сервис с математическими задачами на Django.
+- «Ананас» (https://mypineapple.pythonanywhere.com/): социальная сеть на Django.
+- Электронный журнал: внутренняя веб-система на Django (NDA).
+
+## Стек
+Python, Django, DRF, FastAPI, Flask, Vue 3, TypeScript, JavaScript, Vite, Pinia, PostgreSQL, SQLAlchemy, Redis, Celery, Docker, Nginx, CI/CD, Linux, Git, OpenAI API, Pytest.
+
+## Контакт
+Для обсуждения проекта: Telegram @fsyu13 или email funtiknax13@yandex.ru.

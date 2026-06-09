@@ -1,3 +1,4 @@
+/* ============ Mobile menu ============ */
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
 
@@ -15,75 +16,34 @@ if (menuToggle && nav) {
   });
 }
 
-const yandexBlock = document.getElementById("yandex-form-block");
-const yandexIframe = document.getElementById("yandex-form-iframe");
-const fallbackToggle = document.getElementById("form-fallback-toggle");
-const yandexToggle = document.getElementById("form-yandex-toggle");
-const form = document.getElementById("feedback-form");
-const status = document.getElementById("form-status");
-
-const showFallbackForm = () => {
-  if (!yandexBlock || !form) return;
-  yandexBlock.classList.add("is-hidden");
-  yandexBlock.hidden = true;
-  form.hidden = false;
-  if (yandexToggle) yandexToggle.hidden = false;
-};
-
-const showYandexForm = () => {
-  if (!yandexBlock || !form) return;
-  yandexBlock.classList.remove("is-hidden");
-  yandexBlock.hidden = false;
-  form.hidden = true;
-  if (yandexToggle) yandexToggle.hidden = true;
-  if (fallbackToggle) fallbackToggle.hidden = false;
-};
-
-if (fallbackToggle) {
-  fallbackToggle.addEventListener("click", showFallbackForm);
+/* ============ Scroll reveal ============ */
+const revealEls = document.querySelectorAll("[data-reveal]");
+if (revealEls.length && "IntersectionObserver" in window) {
+  const io = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+  );
+  revealEls.forEach((el) => io.observe(el));
+} else {
+  revealEls.forEach((el) => el.classList.add("is-visible"));
 }
 
-if (yandexToggle) {
-  yandexToggle.addEventListener("click", showYandexForm);
-}
-
-if (yandexIframe && fallbackToggle) {
-  fallbackToggle.hidden = false;
-
-  yandexIframe.addEventListener("error", () => {
-    fallbackToggle.hidden = false;
+/* ============ Card glow follows cursor ============ */
+document.querySelectorAll(".card").forEach((card) => {
+  card.addEventListener("pointermove", (e) => {
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty("--mx", `${e.clientX - rect.left}px`);
   });
+});
 
-  window.setTimeout(() => {
-    try {
-      const doc = yandexIframe.contentDocument;
-      if (doc && doc.body && doc.body.childElementCount === 0) {
-        fallbackToggle.hidden = false;
-      }
-    } catch {
-      /* cross-origin: iframe likely loaded, keep Yandex form visible */
-    }
-  }, 8000);
-}
-
-if (form && status) {
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const name = form.name.value.trim();
-    const contact = form.contact.value.trim();
-    const message = form.message.value.trim();
-    const subject = encodeURIComponent("Заявка с сайта FedorovDev");
-    const body = encodeURIComponent(
-      `Имя: ${name}\nКонтакт: ${contact}\n\nЗадача:\n${message}`
-    );
-
-    window.location.href = `mailto:funtiknax13@yandex.ru?subject=${subject}&body=${body}`;
-    status.textContent =
-      "Откроется почтовый клиент. Если не сработало — напишите в Telegram @fsyu13.";
-    form.reset();
-  });
-}
-
+/* ============ Projects carousel ============ */
 const carousel = document.querySelector("[data-carousel]");
 
 if (carousel) {
