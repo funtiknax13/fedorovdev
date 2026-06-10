@@ -81,7 +81,7 @@ if (leadForm && formStatus) {
     } catch (err) {
       formStatus.classList.add("is-err");
       formStatus.textContent =
-        "Не удалось отправить. Напишите в Telegram @fsyu13 или на funtiknax13@yandex.ru.";
+        "Не удалось отправить. Напишите в Telegram @fsyu13 или на sergeyfedorov13@yandex.ru.";
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = originalLabel;

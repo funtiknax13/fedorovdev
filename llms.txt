@@ -6,7 +6,7 @@
 - Имя: Фёдоров Сергей (бренд — FedorovDev)
 - Роль: Python Backend & Full-stack разработчик
 - Сайт: https://fedorov-dev.ru/
-- Email: funtiknax13@yandex.ru
+- Email: sergeyfedorov13@yandex.ru
 - Telegram: https://t.me/fsyu13
 - GitHub: https://github.com/funtiknax13
 
@@ -26,4 +26,4 @@
 Python, Django, DRF, FastAPI, Flask, Vue 3, TypeScript, JavaScript, Vite, Pinia, PostgreSQL, SQLAlchemy, Redis, Celery, Docker, Nginx, CI/CD, Linux, Git, OpenAI API, Pytest.
 
 ## Контакт
-Для обсуждения проекта: Telegram @fsyu13 или email funtiknax13@yandex.ru.
+Для обсуждения проекта: Telegram @fsyu13 или email sergeyfedorov13@yandex.ru.
