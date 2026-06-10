@@ -355,20 +355,32 @@
             </ul>
           </aside>
           <div class="contact-form-panel" data-reveal>
-            <p class="yandex-form-heading">// Заявка</p>
-            <div class="yandex-form-frame">
-              <iframe
-                id="yandex-form-iframe"
-                src="https://forms.yandex.ru/u/6a0dd4486d2d736ca5db7ebb?iframe=1"
-                name="ya-form-6a0dd4486d2d736ca5db7ebb"
-                title="Форма заявки FedorovDev"
-                class="yandex-form-iframe"
-                loading="lazy"
-              ></iframe>
-            </div>
+            <p class="form-heading">// Заявка</p>
+            <form id="lead-form" class="lead-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+              <input type="hidden" name="access_key" value="e0970bf2-6e9f-4a5c-9be2-ade050adc8a0">
+              <input type="hidden" name="subject" value="Новая заявка с сайта FedorovDev">
+              <input type="hidden" name="from_name" value="FedorovDev — сайт">
+              <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+              <div class="field">
+                <label for="lf-name">Имя</label>
+                <input id="lf-name" name="name" type="text" required autocomplete="name" placeholder="Как к вам обращаться">
+              </div>
+              <div class="field">
+                <label for="lf-contact">Контакт</label>
+                <input id="lf-contact" name="contact" type="text" required placeholder="Email, телефон или Telegram">
+              </div>
+              <div class="field">
+                <label for="lf-message">Задача</label>
+                <textarea id="lf-message" name="message" rows="5" required placeholder="Тип проекта: сайт, API, SaaS, доработка…"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary lead-form__submit">Отправить заявку</button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
             <p class="form-alt">
-              Или <a href="https://t.me/fsyu13" target="_blank" rel="noopener noreferrer">Telegram</a>
-              · <a href="https://forms.yandex.ru/u/6a0dd4486d2d736ca5db7ebb/" target="_blank" rel="noopener noreferrer">открыть форму на Яндексе</a>
+              Или сразу в <a href="https://t.me/fsyu13" target="_blank" rel="noopener noreferrer">Telegram</a>
+              · <a href="mailto:funtiknax13@yandex.ru">на почту</a>
             </p>
           </div>
         </div>
@@ -506,7 +518,6 @@
     ]
   }
   </script>
-  <script src="https://forms.yandex.ru/_static/embed.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

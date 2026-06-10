@@ -43,6 +43,52 @@ document.querySelectorAll(".card").forEach((card) => {
   });
 });
 
+/* ============ Lead form (Web3Forms) ============ */
+const leadForm = document.getElementById("lead-form");
+const formStatus = document.getElementById("form-status");
+
+if (leadForm && formStatus) {
+  leadForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (!leadForm.checkValidity()) {
+      leadForm.reportValidity();
+      return;
+    }
+
+    const submitBtn = leadForm.querySelector('button[type="submit"]');
+    const originalLabel = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Отправка…";
+    formStatus.className = "form-status";
+    formStatus.textContent = "";
+
+    try {
+      const response = await fetch(leadForm.action, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(leadForm),
+      });
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        leadForm.reset();
+        formStatus.classList.add("is-ok");
+        formStatus.textContent = "Заявка отправлена — отвечу в течение рабочего дня. Спасибо!";
+      } else {
+        throw new Error(data.message || "Ошибка отправки");
+      }
+    } catch (err) {
+      formStatus.classList.add("is-err");
+      formStatus.textContent =
+        "Не удалось отправить. Напишите в Telegram @fsyu13 или на funtiknax13@yandex.ru.";
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalLabel;
+    }
+  });
+}
+
 /* ============ Projects carousel ============ */
 const carousel = document.querySelector("[data-carousel]");
 
