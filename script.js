@@ -59,7 +59,7 @@ if (leadForm && formStatus) {
     const submitBtn = leadForm.querySelector('button[type="submit"]');
     const originalLabel = submitBtn.textContent;
     submitBtn.disabled = true;
-    submitBtn.textContent = "Отправка…";
+    submitBtn.textContent = window.t("form.sending");
     formStatus.className = "form-status";
     formStatus.textContent = "";
 
@@ -74,14 +74,13 @@ if (leadForm && formStatus) {
       if (response.ok && data.success) {
         leadForm.reset();
         formStatus.classList.add("is-ok");
-        formStatus.textContent = "Заявка отправлена — отвечу в течение рабочего дня. Спасибо!";
+        formStatus.textContent = window.t("form.ok");
       } else {
         throw new Error(data.message || "Ошибка отправки");
       }
     } catch (err) {
       formStatus.classList.add("is-err");
-      formStatus.textContent =
-        "Не удалось отправить. Напишите в Telegram @fsyu13 или на sergeyfedorov13@yandex.ru.";
+      formStatus.textContent = window.t("form.err");
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = originalLabel;

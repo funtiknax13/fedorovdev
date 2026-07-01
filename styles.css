@@ -114,10 +114,27 @@ a { color: inherit; }
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  gap: 20px;
   padding: 16px 0;
 }
+/* Lang switcher */
+.lang-switcher { display: flex; align-items: center; gap: 2px; }
+.lang-btn {
+  background: none;
+  border: 1px solid transparent;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 5px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease), background 0.2s var(--ease);
+}
+.lang-btn:hover { color: var(--ink); }
+.lang-btn.is-active { color: var(--accent); border-color: rgba(255,90,31,0.4); background: var(--accent-ghost); }
 
 .logo {
   font-family: var(--font-mono);
@@ -129,6 +146,7 @@ a { color: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  margin-right: auto;
 }
 .logo::before {
   content: "";
