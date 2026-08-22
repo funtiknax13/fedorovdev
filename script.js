@@ -35,13 +35,73 @@ if (revealEls.length && "IntersectionObserver" in window) {
   revealEls.forEach((el) => el.classList.add("is-visible"));
 }
 
-/* ============ Card glow follows cursor ============ */
-document.querySelectorAll(".card").forEach((card) => {
-  card.addEventListener("pointermove", (e) => {
-    const rect = card.getBoundingClientRect();
-    card.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+/* ============ Cursor-follow glow on premium surfaces ============ */
+document
+  .querySelectorAll(".card, .spec, .project-card, .stack-group, .contact-card, .contact-form-panel")
+  .forEach((el) => {
+    el.addEventListener("pointermove", (e) => {
+      const rect = el.getBoundingClientRect();
+      el.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+      el.style.setProperty("--my", `${e.clientY - rect.top}px`);
+    });
   });
+
+/* ============ Hero headline: blur-in word reveal ============ */
+/* Runs on DOMContentLoaded so it fires after i18n.js's own DOMContentLoaded
+   handler (registered first, in i18n.js) has already set the translated
+   innerHTML — otherwise i18n overwrites these spans right after they're added. */
+document.addEventListener("DOMContentLoaded", () => {
+  const heroH1 = document.querySelector(".hero h1");
+  if (!heroH1) return;
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReducedMotion) return;
+
+  const wrapWords = (node) => {
+    Array.from(node.childNodes).forEach((child) => {
+      if (child.nodeType === Node.TEXT_NODE) {
+        const frag = document.createDocumentFragment();
+        const parts = child.textContent.split(/(\s+)/);
+        parts.forEach((part) => {
+          if (part.trim() === "") {
+            frag.appendChild(document.createTextNode(part));
+          } else {
+            const span = document.createElement("span");
+            span.className = "word";
+            span.textContent = part;
+            frag.appendChild(span);
+          }
+        });
+        child.replaceWith(frag);
+      } else if (child.nodeType === Node.ELEMENT_NODE) {
+        wrapWords(child);
+      }
+    });
+  };
+  wrapWords(heroH1);
+  heroH1.classList.remove("load-up", "d2");
+  heroH1.querySelectorAll(".word").forEach((word, i) => {
+    word.style.setProperty("--wi", i);
+  });
+  requestAnimationFrame(() => heroH1.classList.add("words-in"));
 });
+
+/* ============ Blueprint grid parallax on scroll ============ */
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  let ticking = false;
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          document.body.style.setProperty("--grid-shift", `${window.scrollY * 0.04}px`);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
+}
 
 /* ============ Lead form (Web3Forms) ============ */
 const leadForm = document.getElementById("lead-form");
